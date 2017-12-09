@@ -19,13 +19,15 @@ import com.ldf.calendar.view.MonthPager;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 
 public final class Utils {
 
-    private static HashMap<String, String> markData = new HashMap<>();
+    private static List< String> markData = new ArrayList<>();
 
     private Utils() {
 
@@ -148,7 +150,7 @@ public final class Utils {
      *
      * @return HashMap<String, String> 标记日期数据
      */
-    public static HashMap<String, String> loadMarkData() {
+    public static List< String> loadMarkData() {
         return markData;
     }
 
@@ -158,7 +160,7 @@ public final class Utils {
      * @param data 标记日期数据
      * @return void
      */
-    public static void setMarkData(HashMap<String, String> data) {
+    public static void setMarkData(List< String> data) {
         markData = data;
     }
 

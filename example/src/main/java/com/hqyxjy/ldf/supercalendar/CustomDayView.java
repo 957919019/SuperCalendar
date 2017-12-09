@@ -47,16 +47,12 @@ public class CustomDayView extends DayView {
     }
 
     private void renderMarker(CalendarDate date, State state) {
-        if (Utils.loadMarkData().containsKey(date.toString())) {
+        if (Utils.loadMarkData().contains(date.toString())) {
             if (state == State.SELECT || date.toString().equals(today.toString())) {
                 marker.setVisibility(GONE);
             } else {
                 marker.setVisibility(VISIBLE);
-                if (Utils.loadMarkData().get(date.toString()).equals("0")) {
-                    marker.setEnabled(true);
-                } else {
-                    marker.setEnabled(false);
-                }
+                marker.setEnabled(true);
             }
         } else {
             marker.setVisibility(GONE);

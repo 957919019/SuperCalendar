@@ -1,10 +1,11 @@
 apply plugin: 'com.android.library'
 apply plugin:'com.github.dcendents.android-maven'
+apply plugin: 'com.neenbedankt.android-apt'
 
 group='com.github.MagicMashRoom'
 android {
-    compileSdkVersion 23
-    buildToolsVersion "25.0.0"
+    compileSdkVersion = 25
+    buildToolsVersion "26.0.2"
 
     defaultConfig {
         minSdkVersion 17
@@ -29,4 +30,7 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.4.0'
     compile 'com.android.support:design:23.3.0'
+
+    compile 'com.jakewharton:butterknife:8.4.0'
+    apt 'com.jakewharton:butterknife-compiler:8.4.0'
 }

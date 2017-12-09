@@ -15,6 +15,7 @@ import com.ldf.calendar.view.Calendar;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class CalendarViewAdapter extends PagerAdapter {
     //周排列方式 1：代表周日显示为本周的第一天
@@ -131,7 +132,7 @@ public class CalendarViewAdapter extends PagerAdapter {
         }
     }
 
-    public void setMarkData(HashMap<String, String> markData) {
+    public void setMarkData(List< String> markData) {
         Utils.setMarkData(markData);
     }
 
